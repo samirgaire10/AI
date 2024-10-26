@@ -354,23 +354,6 @@ function toggleMenu() {
 }
 
 
-document.getElementById('toggleColorBtn').addEventListener('click', function() {
-  // Get current background color
-  const currentColor = document.body.style.backgroundColor;
-
-  // Toggle between black and white background
-  if (currentColor === 'white' || currentColor === '') {
-      document.body.style.backgroundColor = 'black';
-      document.body.style.color = 'white'; // Change text color to white for better readability
-      this.textContent = 'Switch to White'; // Change button text
-  } else {
-      document.body.style.backgroundColor = 'white';
-      document.body.style.color = 'black'; // Change text color to black
-      this.textContent = 'Switch to Black'; // Change button text
-  }
-});
-
-
 
 
 
