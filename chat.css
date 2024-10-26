@@ -1,5 +1,6 @@
 
 body {
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition */
     /* background-color: skyblue;  */
     color: #26dbdb;
     font-family: 'Arial', sans-serif;
@@ -197,3 +198,10 @@ h2 {
 .btn-primary:hover {
   background: linear-gradient(45deg, #f06595, #ff6b6b);
 }
+
+
+button {
+  background-color: #4CAF50;
+  color: white;
+}
+

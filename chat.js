@@ -253,11 +253,14 @@ document.getElementById("user-input").addEventListener("keydown", function (e) {
   }
 });
 
+
+
 window.onload = () => {
   updateChatList();
   populateModels();
   adjustPadding();
   autoFocusInput();
+  loadBackgroundColor();
 
   document.getElementById("delete-chat").addEventListener("click", deleteChat);
   document.getElementById("saveName").addEventListener("click", saveChat);
@@ -339,3 +342,80 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
   document.getElementById("hide").style.display = "block";
 }
+
+
+
+
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
+
+
+document.getElementById('toggleColorBtn').addEventListener('click', function() {
+  // Get current background color
+  const currentColor = document.body.style.backgroundColor;
+
+  // Toggle between black and white background
+  if (currentColor === 'white' || currentColor === '') {
+      document.body.style.backgroundColor = 'black';
+      document.body.style.color = 'white'; // Change text color to white for better readability
+      this.textContent = 'Switch to White'; // Change button text
+  } else {
+      document.body.style.backgroundColor = 'white';
+      document.body.style.color = 'black'; // Change text color to black
+      this.textContent = 'Switch to Black'; // Change button text
+  }
+});
+
+
+
+
+
+
+
+// Function to change background color and store in both localStorage and cookies
+function changeBackground(color) {
+  document.body.style.backgroundColor = color;
+
+  // Adjust text color for better contrast
+  document.body.style.color = (color === 'black') ? 'white' : 'black';
+
+  // Store the selected color in localStorage
+  localStorage.setItem('backgroundColor', color);
+  
+  // Also set the cookie with a duration of 7 days
+  document.cookie = `backgroundColor=${color}; path=/; max-age=${7 * 24 * 60 * 60}`;
+}
+
+// Function to get a cookie by name
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+// Function to load background color from localStorage or cookies on page load
+function loadBackgroundColor() {
+  // First, try to get the color from localStorage
+  let savedColor = localStorage.getItem('backgroundColor');
+
+  // If no color is found in localStorage, check the cookie
+  if (!savedColor) {
+      savedColor = getCookie('backgroundColor');
+  }
+
+  // If a color is found, apply it
+  if (savedColor) {
+      document.body.style.backgroundColor = savedColor;
+
+      // Adjust text color for better contrast
+      document.body.style.color = (savedColor === 'black') ? 'white' : 'black';
+  }
+}
+
+
+
+

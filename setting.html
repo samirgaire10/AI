@@ -15,12 +15,9 @@
     <script src="resources/purify.min.js" integrity="sha256-QigBQMy2be3IqJD2ezKJUJ5gycSmyYlRHj2VGBuITpU="
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="chat.css">
-
 </head>
 
 <body data-bs-theme="dark">
-
-
     <div class="main">
 
         <div class="sidenav" id="mySidebar" class="sidebar">
@@ -30,46 +27,52 @@
             <a href="./model.html">Model</a>
             <a href="./setting.html">Setting</a>
             <hr>
-            <!-- ------------- -->
-
 
             <div class="d-flex align-items-center">
                 <select id="chat-select" class="form-select" style="width: 100%;">
                     <option value="" disabled selected>Select a chat</option>
                 </select>
             </div>
-
         </div>
-
-
-
 
         <div id="main" class="container">
             <div class="row pt-3">
                 <div class="col-md-8 col-12">
                     <button class="openbtn" onclick="openNav()">☰</button>
-
-                    <a href="./index.html"> <img src="favicon.ico" style="width: 10%;" alt="ollama">
-                    </a>
+                    <a href="./index.html"> <img src="favicon.ico" style="width: 10%;" alt="ollama"></a>
                 </div>
             </div>
 
             <center>
                 <h2>Setting</h2>
-            </center>
+            <hr>
+            <br><br>
 
-            <br><br>
-            <br><br>
+            <div class="container">        
+                <!-- Background Color Selection Buttons -->
+                <h5>Choose Background Color:</h5>
+                <button class="btn btn-light" onclick="changeBackground('white')">White</button>
+                <button class="btn btn-dark text-light" onclick="changeBackground('black')">Black</button>
+                <button class="btn btn-info" onclick="changeBackground('skyblue')">Skyblue</button>
+                <button class="btn btn-danger" onclick="changeBackground('pink')">Pink</button>
+                <button class="btn btn-success" onclick="changeBackground('green')">Green</button>
+            </div>
+
+        </center>
 
 
         </div>
     </div>
 
 
-
-    <script src="api.js"></script>
-    <script src="chat.js"></script>
+   
 
 </body>
+<script src="api.js"></script>
+<script src="chat.js"></script>
+
+<script>
+       window.onload = loadBackgroundColor;
+</script>
 
 </html>
