@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Modals</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="resources/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="resources/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="resources/marked.min.js"
+        integrity="sha384-dZulhREgb+hCgQMhZ2VG0l37VQj5pJBq2w0h7Jn3tdMn36aXNepF1+FMLBB4O649"
+        crossorigin="anonymous"></script>
+    <script src="resources/purify.min.js" integrity="sha256-QigBQMy2be3IqJD2ezKJUJ5gycSmyYlRHj2VGBuITpU="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="chat.css">
+
+</head>
+
+<body data-bs-theme="dark">
+
+
+    <div class="main">
+
+        <div class="sidenav" id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+            <a href="./index.html">Ollama</a>
+            <a href="./model.html">Model</a>
+            <a href="./setting.html">Setting</a>
+            <hr>
+            <!-- ------------- -->
+
+
+            <div class="d-flex align-items-center">
+                <select id="chat-select" class="form-select" style="width: 100%;">
+                    <option value="" disabled selected>Select a chat</option>
+                </select>
+            </div>
+
+        </div>
+
+
+
+
+        <div id="main" class="container">
+            <div class="row pt-3">
+                <div class="col-md-8 col-12">
+                    <button class="openbtn" onclick="openNav()">☰</button>
+
+                    <a href="./index.html"> <img src="favicon.ico" style="width: 10%;" alt="ollama">
+                    </a>
+                </div>
+            </div>
+
+            <center>
+                <h2>Download Ollama Models </h2>
+            </center>
+
+            <br><br>
+            <br><br>
+
+            <h1>Models</h1>
+            <div id="download-message" class="mb-3"></div>
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="model-list">
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- model names and download -->
+    <script>
+        // Function to fetch JSON data and display it
+        async function fetchModels() {
+            try {
+                const response = await fetch('models.json');
+                const models = await response.json();
+                const modelList = document.getElementById('model-list');
+
+                models.forEach(model => {
+                    const colDiv = document.createElement('div');
+                    colDiv.classList.add('col');
+
+                    const cardDiv = document.createElement('div');
+                    cardDiv.classList.add('card', 'text-center');
+
+                    const cardBody = document.createElement('div');
+                    cardBody.classList.add('card-body');
+
+                    // Model name above the button
+                    const modelName = document.createElement('h5');
+                    modelName.classList.add('card-title');
+                    modelName.textContent = model.name; // Access the 'name' property
+
+                    // Add a paragraph to show the model name above the button
+                    const modelDescription = document.createElement('p');
+                    modelDescription.textContent = `${model.paragraph}`; // Show the model name
+                    modelDescription.classList.add('mb-2'); // Optional: Add some margin below the description
+
+                    // Add a paragraph to display the model's description
+                    const modelDetails = document.createElement('p');
+                    modelDetails.textContent = model.description; // Access the 'description' property
+                    modelDetails.classList.add('card-text', 'text-muted', 'mb-3'); // Style as needed
+
+                    const downloadButton = document.createElement('button');
+                    downloadButton.classList.add('btn', 'btn-primary', 'w-100', 'mb-2');
+                    downloadButton.textContent = 'Download Model';
+                    downloadButton.onclick = () => {
+                        displayDownloadMessage(model.name);
+                        executeCommand(`ollama run ${model.name}`);
+                    };
+
+                    // Append elements to the card body
+                    cardBody.appendChild(modelName); // Display the model name
+                    cardBody.appendChild(modelDescription); // Append model name description
+                    cardBody.appendChild(modelDetails); // Append the model's description
+                    cardBody.appendChild(downloadButton);
+                    cardDiv.appendChild(cardBody);
+                    colDiv.appendChild(cardDiv);
+                    modelList.appendChild(colDiv);
+                });
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        // Function to display the download message
+        function displayDownloadMessage(modelName) {
+            const messageDiv = document.getElementById('download-message');
+            messageDiv.textContent = `Downloading model: ${modelName}...`;
+            messageDiv.classList.add('alert', 'alert-info'); // Add Bootstrap alert classes
+        }
+
+        // Dummy function to simulate command execution
+        function executeCommand(command) {
+            console.log(`Executing command: ${command}`);
+            // Add your command execution logic here
+        }
+
+        // Call the fetchModels function on page load
+        fetchModels();
+    </script>
+
+    <!-- ------- -----  -->
+
+
+
+
+
+    <!-- -------for download -----  -->
+
+    <pre id="output" class="mt-2"></pre>
+
+    <script>
+        async function executeCommand(command) {
+            const response = await fetch('http://localhost:5000/execute', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ command })
+            });
+
+            const result = await response.json();
+            document.getElementById('output').textContent = result.output || result.error;
+        }
+    </script>
+
+    <!-- ------- -----  -->
+
+
+
+
+<script src="api.js"></script>
+<script src="chat.js"></script>
+
+</body>
+
+</html>

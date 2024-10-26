@@ -1,0 +1,15 @@
+The user neet to install
+
+--------- to able to install model from the site ------------ 
+pip install Flask     
+pip install flask-cors
+
+
+----------- get all the models name from the ollama.com ------------
+pip install requests beautifulsoup4
+
+
+
+-----------  start to able to install models -----------
+python .\app.py   
+
