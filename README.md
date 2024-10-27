@@ -35,3 +35,9 @@ Run Models Locally: Load, execute, and interact with models on your local machin
                     <li>Support multiple Language </li>
                 </ol>
                 </p>
+
+<h1>Example</h1>
+            <video controls width="700">
+                <source src="AI.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
