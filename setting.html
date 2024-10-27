@@ -45,55 +45,64 @@
 
             <center>
                 <h2>Setting</h2>
-            <hr>
-            <br><br>
+                <hr>
+                <br><br>
 
-            <div class="container">        
+                <div class="container">
                     <h5>Choose Background Color:</h5>
                     <button class="btn btn-light" onclick="changeBackground('white')">White</button>
                     <button class="btn btn-secondary" onclick="changeBackground('grey')">Grey</button>
-                    <button class="btn btn-dark text-light" onclick="changeBackground('#333')">Dark Grey</button> <!-- Dark Grey Button -->
-                    <button class="btn btn-dark text-light" onclick="changeBackground('black')">Black</button> <!-- Black Button -->
+                    <button class="btn btn-dark text-light" onclick="changeBackground('#333')">Dark Grey</button>
+                    <!-- Dark Grey Button -->
+                    <button class="btn btn-dark text-light" onclick="changeBackground('black')">Black</button>
+                    <!-- Black Button -->
                     <button class="btn btn-info" onclick="changeBackground('skyblue')">Skyblue</button>
                     <button class="btn btn-danger" onclick="changeBackground('pink')">Pink</button>
                     <button class="btn btn-success" onclick="changeBackground('green')">Green</button>
-                
-            </div>
 
-            <br><br>
-            <br><br>
-            <hr>
+                </div>
 
-            <h2>About</h2>
-            <p>Web UI is a user-friendly, Open source 
-                web-based interface for interacting with Ollama,
-                a tool for managing AI models and chat interactions. 
-                It is designed to resemble popular chat interfaces like ChatGPT,
-                offering features such as model switching, chat history management , installing Ollama models.
-                <ol  style="text-align: left;">
+                <br><br>
+                <br><br>
+                <hr>
+
+                <h2>About</h2>
+                <p>Web UI is a user-friendly, Open source
+                    web-based interface for interacting with Ollama,
+                    a tool for managing AI models and chat interactions.
+                    It is designed to resemble popular chat interfaces like ChatGPT,
+                    offering features such as model switching, chat history management , installing Ollama models.
+                <ol style="text-align: left;">
                     <li>Ollama supports a wide variety of models—more than 120—available for download and usage.</li>
                     <li>user-friendly</li>
                     <li>Open source </li>
                     <li>Beautiful UI</li>
                 </ol>
-            </p>
+                <h2>Todo</h2>
+                <ol style="text-align: left;">
+                    <li>Chatgpt support</li>
+                    <li>Model sort by --popular or newest  </li>
+                    <li>system prompt support</li>
+                    <li>able to download models by parameter </li>
+                </ol>
+                </p>
 
 
-        </center>
+            </center>
 
 
         </div>
     </div>
 
 
-   
+
 
 </body>
 <script src="api.js"></script>
 <script src="chat.js"></script>
 
 <script>
-       window.onload = loadBackgroundColor;
+    window.onload = loadBackgroundColor;
 </script>
 
 </html>
