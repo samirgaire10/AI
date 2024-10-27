@@ -12,7 +12,7 @@ Run Models Locally: Load, execute, and interact with models on your local machin
                     Running this command will activate the application,
                     allowing you to fully explore its capabilities.</p>
 
- <h2>About</h2>
+<h2>About</h2>
                 <p>Web UI is a user-friendly, Open source
                     web-based interface for interacting with Ollama,
                     a tool for managing AI models and chat interactions.
@@ -24,9 +24,9 @@ Run Models Locally: Load, execute, and interact with models on your local machin
                     <li>Open source </li>
                     <li>Beautiful UI</li>
                     <li>Offline USE afer downloading Model</li>
-
                 </ol>
-                <h2>Todo</h2>
+
+<h2>Todo</h2>
                 <ol style="text-align: left;">
                     <li>Chatgpt support</li>
                     <li>Model sort by --popular or newest  </li>
