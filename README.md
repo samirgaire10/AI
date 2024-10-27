@@ -6,7 +6,7 @@ Run Models Locally: Load, execute, and interact with models on your local machin
  <h2>How to use</h2>
                 <p>To ensure smooth operation and access to all features,
                     such as downloading and searching models,
-                    it's essential to run the app using the command <br>
+                    it's essential to run the app using the command 
                    <strong style="color: red;">`python app.py` </strong>  .
                     Without doing so, some functionalities may be unavailable.
                     Running this command will activate the application,
@@ -23,6 +23,8 @@ Run Models Locally: Load, execute, and interact with models on your local machin
                     <li>user-friendly</li>
                     <li>Open source </li>
                     <li>Beautiful UI</li>
+                    <li>Offline USE afer downloading Model</li>
+
                 </ol>
                 <h2>Todo</h2>
                 <ol style="text-align: left;">
