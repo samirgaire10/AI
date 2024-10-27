@@ -3,6 +3,15 @@
 Download Models: Browse and download various open-source and fine-tuned models directly through the UI.
 Run Models Locally: Load, execute, and interact with models on your local machine.
 
+ <h2>How to use</h2>
+                <p>To ensure smooth operation and access to all features,
+                    such as downloading and searching models,
+                    it's essential to run the app using the command <br>
+                   <strong style="color: red;">`python app.py` </strong>  .
+                    Without doing so, some functionalities may be unavailable.
+                    Running this command will activate the application,
+                    allowing you to fully explore its capabilities.</p>
+
  <h2>About</h2>
                 <p>Web UI is a user-friendly, Open source
                     web-based interface for interacting with Ollama,
@@ -21,5 +30,6 @@ Run Models Locally: Load, execute, and interact with models on your local machin
                     <li>Model sort by --popular or newest  </li>
                     <li>system prompt support</li>
                     <li>able to download models by parameter </li>
+                    <li>Support multiple Language </li>
                 </ol>
                 </p>
