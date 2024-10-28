@@ -182,8 +182,10 @@
     <!--  -->
     <script>
         update_model_list.onclick = () => {
-           displayDownloadMessage("Updating...");
-           executeCommand(`python updatemodels.py`);
+        //    displayDownloadMessage("Updating...");
+           executeCommand(`python scripts/updatemodels.py`);
+           location.reload();
+
        };
    </script>
 
