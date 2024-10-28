@@ -1,4 +1,8 @@
 @echo off
+
+echo starting service 
+timeout /t 5 /nobreak > NUL
+
 start cmd /c "app.py"
 start cmd /c "scripts\updatemodels.py"
 start php -S localhost:8000

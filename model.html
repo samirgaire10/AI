@@ -84,7 +84,7 @@
         // Function to fetch JSON data and display it
         async function fetchModels() {
             try {
-                const response = await fetch('scripts/models.json');
+                const response = await fetch('models.json');
                 const models = await response.json();
                 const modelList = document.getElementById('model-list');
 
