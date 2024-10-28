@@ -8,8 +8,8 @@ import json
 
 
 # URL of the page to scrape
-url = "https://ollama.com/library"
-file_name = '../models.json'
+url = "https://ollama.com/library?sort=newest"
+file_name = 'models.json'
 
 
 # Send a GET request to the URL

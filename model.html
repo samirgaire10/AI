@@ -55,22 +55,20 @@
             </div>
 
             <center>
-                <h2>Download Ollama Models </h2>
+                <h2 id="tooltip" class="ms-2" data-bs-toggle="tooltip" 
+                title="You can also download models LLM from https://ollama.com/library  🤩😄" >
+                Download Ollama Models 
+            </h2>
             </center>
 
             <br><br>
             <br><br>
 
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <h1>Models</h1>
+                <h1 id="tooltip" class="ms-2" data-bs-toggle="tooltip" 
+                title="You can also download models LLM from https://ollama.com/library  🤩😄">Models</h1>
                 <button id="update_model_list">Update Models Lists</button>
 
-                <script>
-                     update_model_list.onclick = () => {
-                        displayDownloadMessage("Updating...");
-                        executeCommand(`python updatemodels.py`);
-                    };
-                </script>
             </div>
             <hr>
 
@@ -86,7 +84,7 @@
         // Function to fetch JSON data and display it
         async function fetchModels() {
             try {
-                const response = await fetch('models.json');
+                const response = await fetch('scripts/models.json');
                 const models = await response.json();
                 const modelList = document.getElementById('model-list');
 
@@ -181,7 +179,22 @@
 
     <!-- ------- -----  -->
 
+    <!--  -->
+    <script>
+        update_model_list.onclick = () => {
+           displayDownloadMessage("Updating...");
+           executeCommand(`python updatemodels.py`);
+       };
+   </script>
 
+
+<script>
+    // Initialize Bootstrap tooltip
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+</script>
 
 
     <script src="api.js"></script>
