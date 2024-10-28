@@ -84,12 +84,12 @@
         "paragraph": "Llama 2 is a collection of foundation language models ranging from 7B to 70B parameters."
     },
     {
-        "name": "codellama",
-        "paragraph": "A large language model that can use text prompts to generate and discuss code."
-    },
-    {
         "name": "nomic-embed-text",
         "paragraph": "A high-performing open embedding model with a large token context window."
+    },
+    {
+        "name": "codellama",
+        "paragraph": "A large language model that can use text prompts to generate and discuss code."
     },
     {
         "name": "mxbai-embed-large",
@@ -116,12 +116,12 @@
         "paragraph": "Uncensored Llama 2 model by George Sung and Jarrad Hope."
     },
     {
-        "name": "dolphin-mistral",
-        "paragraph": "The uncensored Dolphin model based on Mistral that excels at coding tasks. Updated to version 2.8."
-    },
-    {
         "name": "qwen2.5-coder",
         "paragraph": "The latest series of Code-Specific Qwen models, with significant improvements in code generation, code reasoning, and code fixing."
+    },
+    {
+        "name": "dolphin-mistral",
+        "paragraph": "The uncensored Dolphin model based on Mistral that excels at coding tasks. Updated to version 2.8."
     },
     {
         "name": "yi",
@@ -140,12 +140,12 @@
         "paragraph": "Zephyr is a series of fine-tuned versions of the Mistral and Mixtral models that are trained to act as helpful assistants."
     },
     {
-        "name": "llava-llama3",
-        "paragraph": "A LLaVA model fine-tuned from Llama 3 Instruct with better scores in several benchmarks."
-    },
-    {
         "name": "tinyllama",
         "paragraph": "The TinyLlama project is an open endeavor to train a compact 1.1B Llama model on 3 trillion tokens."
+    },
+    {
+        "name": "llava-llama3",
+        "paragraph": "A LLaVA model fine-tuned from Llama 3 Instruct with better scores in several benchmarks."
     },
     {
         "name": "snowflake-arctic-embed",
@@ -272,20 +272,20 @@
         "paragraph": "A model from NVIDIA based on Llama 3 that excels at conversational question answering (QA) and retrieval-augmented generation (RAG)."
     },
     {
-        "name": "xwinlm",
-        "paragraph": "Conversational model based on Llama 2 that performs competitively on various benchmarks."
-    },
-    {
         "name": "smollm",
         "paragraph": "\ud83e\ude90 A family of small models with 135M, 360M, and 1.7B parameters, trained on a new high-quality dataset."
     },
     {
-        "name": "nous-hermes",
-        "paragraph": "General use models based on Llama and Llama 2 from Nous Research."
+        "name": "xwinlm",
+        "paragraph": "Conversational model based on Llama 2 that performs competitively on various benchmarks."
     },
     {
         "name": "sqlcoder",
         "paragraph": "SQLCoder is a code completion model fined-tuned on StarCoder for SQL generation tasks"
+    },
+    {
+        "name": "nous-hermes",
+        "paragraph": "General use models based on Llama and Llama 2 from Nous Research."
     },
     {
         "name": "phind-codellama",
@@ -384,12 +384,12 @@
         "paragraph": "A series of models from Groq that represent a significant advancement in open-source AI capabilities for tool use/function calling."
     },
     {
-        "name": "codeup",
-        "paragraph": "Great code generation model based on Llama2."
-    },
-    {
         "name": "minicpm-v",
         "paragraph": "A series of multimodal LLMs (MLLMs) designed for vision-language understanding."
+    },
+    {
+        "name": "codeup",
+        "paragraph": "Great code generation model based on Llama2."
     },
     {
         "name": "everythinglm",
@@ -436,6 +436,10 @@
         "paragraph": "A top-performing mixture of experts model, fine-tuned with high-quality data."
     },
     {
+        "name": "nemotron",
+        "paragraph": "Llama-3.1-Nemotron-70B-Instruct is a large language model customized by NVIDIA to improve the helpfulness of LLM generated responses to user queries."
+    },
+    {
         "name": "open-orca-platypus2",
         "paragraph": "Merge of the Open Orca OpenChat model and the Garage-bAInd Platypus 2 model. Designed for chat and code generation."
     },
@@ -450,10 +454,6 @@
     {
         "name": "mathstral",
         "paragraph": "Math\u03a3tral: a 7B model designed for math reasoning and scientific discovery by Mistral AI."
-    },
-    {
-        "name": "nemotron",
-        "paragraph": "Llama-3.1-Nemotron-70B-Instruct is a large language model customized by NVIDIA to improve the helpfulness of LLM generated responses to user queries."
     },
     {
         "name": "solar-pro",
@@ -496,12 +496,12 @@
         "paragraph": "A state-of-the-art fact-checking model developed by Bespoke Labs."
     },
     {
-        "name": "paraphrase-multilingual",
-        "paragraph": "Sentence-transformers model that can be used for tasks like clustering or semantic search."
-    },
-    {
         "name": "granite3-moe",
         "paragraph": "The IBM Granite 1B and 3B models are the first mixture of experts (MoE) Granite models from IBM designed for low latency usage."
+    },
+    {
+        "name": "paraphrase-multilingual",
+        "paragraph": "Sentence-transformers model that can be used for tasks like clustering or semantic search."
     },
     {
         "name": "shieldgemma",
