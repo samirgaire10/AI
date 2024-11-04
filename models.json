@@ -1,5 +1,13 @@
 [
     {
+        "name": "smollm2",
+        "paragraph": "SmolLM2 is a family of compact language models available in three size: 135M, 360M, and 1.7B parameters."
+    },
+    {
+        "name": "granite3-guardian",
+        "paragraph": "The IBM Granite Guardian 3.0 2B and 8B models are designed to detect risks in prompts and/or responses."
+    },
+    {
         "name": "aya-expanse",
         "paragraph": "Cohere For AI's language models trained to perform well across 23 different languages."
     },
