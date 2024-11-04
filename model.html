@@ -67,7 +67,9 @@
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <h1 id="tooltip" class="ms-2" data-bs-toggle="tooltip" 
                 title="You can also download models LLM from https://ollama.com/library  🤩😄">Models</h1>
-                <button id="update_model_list">Update Models Lists</button>
+                Sort By
+                <button id="popular_model_list">popular</button>
+                <button id="newer_model_list">Newer</button>
 
             </div>
             <hr>
@@ -179,9 +181,19 @@
 
     <!-- ------- -----  -->
 
+
     <!--  -->
+    
+    
     <script>
-        update_model_list.onclick = () => {
+        popular_model_list.onclick = () => {
+        //    displayDownloadMessage("Updating...");
+           executeCommand(`python scripts/popular.py`);
+           location.reload();
+
+       };
+
+       newer_model_list.onclick = () => {
         //    displayDownloadMessage("Updating...");
            executeCommand(`python scripts/updatemodels.py`);
            location.reload();
