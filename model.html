@@ -68,11 +68,29 @@
                 <h1 id="tooltip" class="ms-2" data-bs-toggle="tooltip"
                     title="You can also download models LLM from https://ollama.com/library  🤩😄">Models</h1>
 
-                <p style="padding-left: 40%;">Sort By</p>
-                <button id="popular_model_list">popular
-                </button>
-                <button id="newer_model_list">Newer
-                </button>
+
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" id="sortByDropdown" data-bs-toggle="dropdown">
+                        Sort By
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="sortByDropdown">
+                        <li>
+                            <button class="dropdown-item" id="sortByOption1" id="popular_model_list">popular
+                            </button>
+                        </li>
+                        <br>
+                        <li>
+                            <button class="dropdown-item" id="sortByOption1" id="newer_model_list">Newer
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
 
             </div>
             <hr>
