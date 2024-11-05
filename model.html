@@ -157,9 +157,6 @@
     <!-- ------- -----  -->
 
 
-
-
-
     <!-- -------for download -----  -->
 
     <pre id="output" class="mt-2"></pre>
@@ -184,12 +181,12 @@
 
     <!--  -->
 
-
     <script>
         popular_model_list.onclick = () => {
             //    displayDownloadMessage("Updating...");
             executeCommand(`python scripts/popular.py`);
             location.reload();
+
         };
 
         newer_model_list.onclick = () => {
@@ -199,14 +196,14 @@
         };
     </script>
 
-<!-- 
+
     <script>
         // Initialize Bootstrap tooltip
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl);
         });
-    </script> -->
+    </script>
 
 
     <script src="api.js"></script>
