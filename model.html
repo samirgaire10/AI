@@ -190,29 +190,23 @@
             //    displayDownloadMessage("Updating...");
             executeCommand(`python scripts/popular.py`);
             location.reload();
-
         };
-
-    </script>
-
-    <script>
 
         newer_model_list.onclick = () => {
             //    displayDownloadMessage("Updating...");
             executeCommand(`python scripts/updatemodels.py`);
             location.reload();
-
         };
     </script>
 
-
+<!-- 
     <script>
         // Initialize Bootstrap tooltip
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl);
         });
-    </script>
+    </script> -->
 
 
     <script src="api.js"></script>

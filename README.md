@@ -36,8 +36,11 @@ Run Models Locally: Load, execute, and interact with models on your local machin
                 </ol>
                 </p>
 
-<h1>Example</h1>
-            <video controls width="700">
-                <source src="AI.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+## Demo Site 
+
+[Demo Site](https://samirgaire10.github.io/AI/)
+
+
+## My Local Demo Video
+
+[![Project Demo]](./scripts/AI.mp4)
