@@ -3,14 +3,11 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
+
 # ----------  For getting ollama models from ollama.com     ----------
-
-
-
 # URL of the page to scrape
 url = "https://ollama.com/library?sort=popular"
 file_name = 'models.json'
-
 
 # Send a GET request to the URL
 response = requests.get(url)
