@@ -24,12 +24,14 @@ Run Models Locally: Load, execute, and interact with models on your local machin
                     <li>Open source </li>
                     <li>Beautiful UI</li>
                     <li>Offline USE afer downloading Model</li>
+                    <li>Model sort by --popular or newest  </li>
+
                 </ol>
 
 <h2>Todo</h2>
                 <ol style="text-align: left;">
+                    <li>Able to set default model</li>
                     <li>Chatgpt support</li>
-                    <li>Model sort by --popular or newest  </li>
                     <li>system prompt support</li>
                     <li>able to download models by parameter </li>
                     <li>Support multiple Language </li>
