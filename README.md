@@ -25,7 +25,6 @@ Run Models Locally: Load, execute, and interact with models on your local machin
                     <li>Beautiful UI</li>
                     <li>Offline USE afer downloading Model</li>
                     <li>Model sort by --popular or newest  </li>
-
                 </ol>
 
 <h2>Todo</h2>
