@@ -69,28 +69,32 @@
                     title="You can also download models LLM from https://ollama.com/library  🤩😄">Models</h1>
 
 
-
-
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle"  id="sortByDropdown"
-                        data-bs-toggle="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" id="sortByDropdown" data-bs-toggle="dropdown">
                         Sort By
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="sortByDropdown">
                         <li>
-                        <button class="dropdown-item"  id="popular_model_list">popular
-                        </button>
+                            <button class="dropdown-item" id="popular_model_list">popular
+                            </button>
                         </li>
-                        <br>
                         <li>
-                        <button class="dropdown-item" id="newer_model_list">Newer
-                        </button>
+                            <button class="dropdown-item" id="newer_model_list">Newer
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" id="popular_model_list_with_tags" data-bs-toggle="tooltip"
+                                title="It will take longer time">popular with tags
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="dropdown-item" id="newer_model_list_with_tags" data-bs-toggle="tooltip"
+                                title="It will take longer time ">popular with tags
+                            </button>
                         </li>
                     </ul>
                 </div>
-
-
-
 
 
             </div>
@@ -108,7 +112,7 @@
         // Function to fetch JSON data and display it
         async function fetchModels() {
             try {
-                const response = await fetch('models.json');
+                const response = await fetch('scripts/models.json');
                 const models = await response.json();
                 const modelList = document.getElementById('model-list');
 
@@ -214,7 +218,25 @@
 
         newer_model_list.onclick = () => {
             //    displayDownloadMessage("Updating...");
-            executeCommand(`python scripts/updatemodels.py`);
+            executeCommand(`python scripts/Newest.py`);
+            setTimeout(() => {
+                location.reload();
+            }, 5000);
+        };
+
+
+        popular_model_list_with_tags.onclick = () => {
+            //    displayDownloadMessage("Updating...");
+            executeCommand(`python scripts/popular_with_tags.py`);
+            setTimeout(() => {
+                location.reload();
+            }, 5000);
+        };
+
+
+        newer_model_list_with_tags.onclick = () => {
+            //    displayDownloadMessage("Updating...");
+            executeCommand(`python scripts/Newest_with_tags.py`);
             setTimeout(() => {
                 location.reload();
             }, 5000);

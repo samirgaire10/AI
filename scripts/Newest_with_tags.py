@@ -1,5 +1,3 @@
-# this  is just for backup ignore it
-
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -29,7 +27,7 @@ def get_tags(model_name):
 
 # URL of the page to scrape
 url = "https://ollama.com/library?sort=newest"
-file_name = 'models.json'
+file_name = 'scripts/models.json'
 
 # Send a GET request to the URL with timeout for safety
 try:

@@ -26,8 +26,8 @@ def get_tags(model_name):
     return [tag.get_text(strip=True) for tag in tag_elements]
 
 # URL of the page to scrape
-url = "https://ollama.com/library?sort=newest"
-file_name = 'models.json'
+url = "https://ollama.com/library?sort=popular"
+file_name = 'scripts/models.json'
 
 # Send a GET request to the URL with timeout for safety
 try:

@@ -8,7 +8,7 @@ import json
 
 
 # URL of the page to scrape
-url = "https://ollama.com/library?sort=popular"
+url = "https://ollama.com/library?sort=newest"
 file_name = 'scripts/models.json'
 
 
