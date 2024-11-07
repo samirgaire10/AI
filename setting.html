@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Modals</title>
+    <title>Setting</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="resources/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -15,9 +15,17 @@
     <script src="resources/purify.min.js" integrity="sha256-QigBQMy2be3IqJD2ezKJUJ5gycSmyYlRHj2VGBuITpU="
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="chat.css">
+
+    <style>
+        #input-area {
+            display: none;
+        }
+    </style>
 </head>
 
+
 <body data-bs-theme="dark">
+
     <div class="main">
 
         <div class="sidenav" id="mySidebar" class="sidebar">
@@ -27,19 +35,24 @@
             <a href="./model.html">Model</a>
             <a href="./setting.html">Setting</a>
             <hr>
+            <!-- ------------- -->
+
 
             <div class="d-flex align-items-center">
                 <select id="chat-select" class="form-select" style="width: 100%;">
                     <option value="" disabled selected>Select a chat</option>
                 </select>
             </div>
+
         </div>
 
         <div id="main" class="container">
             <div class="row pt-3">
                 <div class="col-md-8 col-12">
                     <button class="openbtn" onclick="openNav()">☰</button>
-                    <a href="./index.html"> <img src="favicon.ico" style="width: 10%;" alt="ollama"></a>
+
+                    <a href="./index.html"> <img src="favicon.ico" style="width: 10%;" alt="ollama">
+                    </a>
                 </div>
             </div>
 
@@ -47,6 +60,41 @@
                 <h2>Setting</h2>
                 <hr>
                 <br><br>
+
+
+
+
+                <!-- ------------------- -->
+
+                <div class="container">
+                    <h5>Choose Default model:</h5>
+
+                    <div class="row pt-3">
+                        <div id="model-controls" class="col-md-4 col-12 text-md-end text-start mb-3">
+                            <div class="d-flex flex-column align-items-md-end align-items-start">
+                                <div class="d-flex align-items-center mb-2">
+                                    <label for="model-select" class="form-label me-2"
+                                        style="font-size: smaller;">Model:</label>
+                                    <select class="form-select" id="model-select" style="width: auto;"></select>
+                                </div>
+                                <button id="set-default-button" class="btn btn-secondary mt-2">Set as Default</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container p-2 card" id="input-area">
+                        <div class="input-group">
+                            <textarea class="form-control" id="user-input"
+                                placeholder="Type your question here..."></textarea>
+                            <button id="send-button" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------- -->
+
+
+
 
                 <div class="container">
                     <h5>Choose Background Color:</h5>
@@ -69,10 +117,11 @@
                 <p>To ensure smooth operation and access to all features,
                     such as downloading and searching models,
                     it's essential to run the app using the command <br>
-                   <strong style="color: red;">`python app.py` </strong>  .
+                    <strong style="color: red;">`python app.py` </strong> .
                     Without doing so, some functionalities may be unavailable.
                     Running this command will activate the application,
-                    allowing you to fully explore its capabilities.</p>
+                    allowing you to fully explore its capabilities.
+                </p>
 
 
                 <h2>About</h2>
@@ -91,7 +140,7 @@
                 <h2>Todo</h2>
                 <ol style="text-align: left;">
                     <li>Chatgpt support</li>
-                    <li>Model sort by --popular or newest  </li>
+                    <li>Model sort by --popular or newest </li>
                     <li>system prompt support</li>
                     <li>able to download models by parameter </li>
                     <li>Support multiple Language </li>
@@ -110,18 +159,13 @@
                 <source src="./scripts/AI.mp4" type="video/mp4">
             </video>
 
+
+
         </div>
     </div>
-
-
-
 
 </body>
 <script src="api.js"></script>
 <script src="chat.js"></script>
-
-<script>
-    window.onload = loadBackgroundColor;
-</script>
 
 </html>
