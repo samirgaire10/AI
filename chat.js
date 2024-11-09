@@ -262,6 +262,7 @@ window.onload = () => {
   autoFocusInput();
   loadBackgroundColor();
 
+
   document.getElementById("delete-chat").addEventListener("click", deleteChat);
   document.getElementById("saveName").addEventListener("click", saveChat);
   document
@@ -398,7 +399,4 @@ function loadBackgroundColor() {
       document.body.style.color = (savedColor === 'black') ? 'white' : 'black';
   }
 }
-
-
-
 

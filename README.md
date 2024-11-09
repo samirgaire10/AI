@@ -3,6 +3,9 @@
 Download Models: Browse and download various open-source and fine-tuned models directly through the UI.
 Run Models Locally: Load, execute, and interact with models on your local machine.
 
+ <h5>Please Download zip !! Do not use git clone command to install </h5>
+
+
  <h2>How to use</h2>
                 <p>To ensure smooth operation and access to all features,
                     such as downloading and searching models,

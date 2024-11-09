@@ -84,12 +84,12 @@
         "paragraph": "Phi-3 is a family of lightweight 3B (Mini) and 14B (Medium) state-of-the-art open models by Microsoft."
     },
     {
-        "name": "llama2",
-        "paragraph": "Llama 2 is a collection of foundation language models ranging from 7B to 70B parameters."
-    },
-    {
         "name": "nomic-embed-text",
         "paragraph": "A high-performing open embedding model with a large token context window."
+    },
+    {
+        "name": "llama2",
+        "paragraph": "Llama 2 is a collection of foundation language models ranging from 7B to 70B parameters."
     },
     {
         "name": "codellama",
@@ -120,12 +120,12 @@
         "paragraph": "Uncensored Llama 2 model by George Sung and Jarrad Hope."
     },
     {
-        "name": "qwen2.5-coder",
-        "paragraph": "The latest series of Code-Specific Qwen models, with significant improvements in code generation, code reasoning, and code fixing."
-    },
-    {
         "name": "tinyllama",
         "paragraph": "The TinyLlama project is an open endeavor to train a compact 1.1B Llama model on 3 trillion tokens."
+    },
+    {
+        "name": "qwen2.5-coder",
+        "paragraph": "The latest series of Code-Specific Qwen models, with significant improvements in code generation, code reasoning, and code fixing."
     },
     {
         "name": "dolphin-mistral",
@@ -172,12 +172,12 @@
         "paragraph": "General use chat model based on Llama and Llama 2 with 2K to 16K context sizes."
     },
     {
-        "name": "granite-code",
-        "paragraph": "A family of open foundation models by IBM for Code Intelligence"
-    },
-    {
         "name": "wizardlm2",
         "paragraph": "State of the art large language model from Microsoft AI with improved performance on complex chat, multilingual, reasoning and agent use cases."
+    },
+    {
+        "name": "granite-code",
+        "paragraph": "A family of open foundation models by IBM for Code Intelligence"
     },
     {
         "name": "wizard-vicuna-uncensored",
@@ -336,12 +336,12 @@
         "paragraph": "Yi-Coder is a series of open-source code language models that delivers state-of-the-art coding performance with fewer than 10 billion parameters."
     },
     {
-        "name": "hermes3",
-        "paragraph": "Hermes 3 is the latest version of the flagship Hermes series of LLMs by Nous Research"
-    },
-    {
         "name": "internlm2",
         "paragraph": "InternLM2.5 is a 7B parameter model tailored for practical scenarios with outstanding reasoning capability."
+    },
+    {
+        "name": "hermes3",
+        "paragraph": "Hermes 3 is the latest version of the flagship Hermes series of LLMs by Nous Research"
     },
     {
         "name": "stable-beluga",
@@ -404,6 +404,10 @@
         "paragraph": "\ud83c\udfa9 Magicoder is a family of 7B parameter models trained on 75K synthetic instruction data using OSS-Instruct, a novel approach to enlightening LLMs with open-source code snippets."
     },
     {
+        "name": "nemotron",
+        "paragraph": "Llama-3.1-Nemotron-70B-Instruct is a large language model customized by NVIDIA to improve the helpfulness of LLM generated responses to user queries."
+    },
+    {
         "name": "stablelm-zephyr",
         "paragraph": "A lightweight chat model allowing accurate, and responsive output without requiring high-end hardware."
     },
@@ -414,10 +418,6 @@
     {
         "name": "codebooga",
         "paragraph": "A high-performing code instruct model created by merging two existing code models."
-    },
-    {
-        "name": "nemotron",
-        "paragraph": "Llama-3.1-Nemotron-70B-Instruct is a large language model customized by NVIDIA to improve the helpfulness of LLM generated responses to user queries."
     },
     {
         "name": "wizard-vicuna",
@@ -468,12 +468,12 @@
         "paragraph": "A series of models that convert HTML content to Markdown content, which is useful for content conversion tasks."
     },
     {
-        "name": "dbrx",
-        "paragraph": "DBRX is an open, general-purpose LLM created by Databricks."
-    },
-    {
         "name": "granite3-dense",
         "paragraph": "The IBM Granite 2B and 8B models are designed to support tool-based use cases and support for retrieval augmented generation (RAG), streamlining code generation, translation and bug fixing."
+    },
+    {
+        "name": "dbrx",
+        "paragraph": "DBRX is an open, general-purpose LLM created by Databricks."
     },
     {
         "name": "nuextract",
@@ -508,12 +508,12 @@
         "paragraph": "An upgraded version of DeekSeek-V2  that integrates the general and coding abilities of both DeepSeek-V2-Chat and DeepSeek-Coder-V2-Instruct."
     },
     {
-        "name": "shieldgemma",
-        "paragraph": "ShieldGemma is set of instruction tuned models for evaluating the safety of text prompt input and text output responses against a set of defined safety policies."
-    },
-    {
         "name": "smollm2",
         "paragraph": "SmolLM2 is a family of compact language models available in three size: 135M, 360M, and 1.7B parameters."
+    },
+    {
+        "name": "shieldgemma",
+        "paragraph": "ShieldGemma is set of instruction tuned models for evaluating the safety of text prompt input and text output responses against a set of defined safety policies."
     },
     {
         "name": "llama-guard3",
