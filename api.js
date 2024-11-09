@@ -1,25 +1,4 @@
-
-
-var ollama_host = localStorage.getItem("host-address");
-if (!ollama_host){
-  ollama_host = 'http://localhost:11434'
-} else {
-  document.getElementById("host-address").value = ollama_host;
-}
-
-if (rebuildRules){
-  rebuildRules(ollama_host);
-}
-
-function setHostAddress(){
-  ollama_host = document.getElementById("host-address").value;
-  localStorage.setItem("host-address", ollama_host);
-  populateModels();
-  if (rebuildRules){
-    rebuildRules(ollama_host);
-  }
-}
-
+ollama_host = 'http://localhost:11434'
 
 
 async function getModels(){

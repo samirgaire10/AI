@@ -1,7 +1,7 @@
 #!/bin/bash
 
-python app.py &
-python scripts/updatemodels.py &
+python  scripts/app.py &
+python scripts/popular.py &
 
 php -S localhost:8000 &
 sleep 3
